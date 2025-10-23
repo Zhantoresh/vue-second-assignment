@@ -1,6 +1,5 @@
 <template>
   <div class="video-card">
-    <!-- Кликабельный превью-блок -->
     <a
       class="thumb"
       :href="url"
@@ -12,7 +11,6 @@
     </a>
 
     <div class="info">
-      <!-- Кликабельный заголовок -->
       <a
         class="title-link"
         :href="url"
@@ -37,10 +35,8 @@
       </button>
       <span class="count">{{ likes }}</span>
 
-      <!-- Просто показываем число дизлайков (как в твоем текущем шаблоне) -->
       <span class="count">{{ dislikes }}</span>
 
-      <!-- Кнопка Watch (опционально) -->
       <a
         class="watch-btn"
         :href="url"
@@ -65,7 +61,7 @@ const props = defineProps({
   thumbnail: String,
   likes: Number,
   dislikes: Number,
-  url: String, // <— новая ссылка на видео
+  url: String,
   userLiked: { type: Boolean, default: false },
   userDisliked: { type: Boolean, default: false },
 });
